@@ -24,7 +24,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
 
 
         /* Event Listener on dropdown list */
-        dropDownMovies.addEventListener("change", (e) => {
+        dropDownMovies.addEventListener("change", () => {
             for (let movie of movieData) {
                 /* Find `release-year` and `movie-description` */
                 let releaseYear = movie.release_date;
