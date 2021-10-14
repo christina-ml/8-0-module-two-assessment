@@ -45,32 +45,22 @@ fetch("https://ghibliapi.herokuapp.com/films")
         /* Add the review to the empty ul */
         let submitList = document.querySelector("#review-form ul");
 
-        /* Find the input value of `review-field` */
-        let reviewInput = document.querySelector("#review-field");
-
-        let submitButton = document.querySelector("#submit-button");
-        submitButton.addEventListener("click", (event)=>{
+        let reviewForm = document.querySelector("#review-form");
+        reviewForm.addEventListener("submit", (event)=>{
             event.preventDefault(); // stops page refresh
-            /* Create a list item element to add to empty ul */
-            let li = document.createElement("li");
-            submitList.append(li);
 
-            let strong = document.createElement("strong");
-            li.append(strong);
             /* Get display-info h3 title */
             let movieHeader = document.querySelector("#display-info h3")
-            /* Using `textContent` on the list item */
-            li.textContent = `${movieHeader.textContent}: ${reviewInput.value}`; // add text content
+
+            /* Create a list item element to add to empty ul */
+            let li = document.createElement("li");
+            li.innerHTML = `<strong>${movieHeader.textContent}: </strong>${reviewInput.value}`
             // <li>
             //     <strong>BlahBlahBlah:</strong> reviewInput
             // </li>
             /* Append it to our page */
             submitList.append(li);
         });
-
-
-
-
 
     })
     .catch((err)=>{
