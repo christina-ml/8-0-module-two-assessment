@@ -29,14 +29,12 @@ fetch("https://ghibliapi.herokuapp.com/films")
                 /* Find `release-year` and `movie-description` */
                 let releaseYear = movie.release_date;
                 let movieDescription = movie.description;
-                // console.log(releaseYear); // works
-                // console.log(movieDescription); // works
 
                 if (dropDownMovies.value === movie.title) {
                     console.log(movie.title);
                     displayInfo.innerHTML = `<h3>${movie.title}</h3>
-                    <p id="release-year">${movie.release_date}</p>
-                    <p id="movie-description">${movie.description}</p>`;
+                    <p id="release-year">${releaseYear}</p>
+                    <p id="movie-description">${movieDescription}</p>`;
                 }
             }
         });
