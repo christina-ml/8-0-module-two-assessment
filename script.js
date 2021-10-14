@@ -49,9 +49,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
         reviewForm.addEventListener("submit", (event)=>{
             event.preventDefault(); // stops page refresh
 
-            /* make input field blank after each input is submitted */
             let reviewInput = document.querySelector("#review-field");
-            // reviewInput.value = "";
 
             /* Get display-info h3 title */
             let movieHeader = document.querySelector("#display-info h3")
@@ -64,6 +62,11 @@ fetch("https://ghibliapi.herokuapp.com/films")
             // </li>
             /* Append it to our page */
             submitList.append(li);
+
+            /* make input field blank after each input is submitted */
+            if (li !== undefined){
+                reviewInput.value = "";
+            }
         });
 
     })
