@@ -30,6 +30,8 @@ This will open the Cypress testing window, where you can click to run an individ
 
 ## Submitting
 
+<!-- NEED TO WAIT UNTIL 5:30 TO DO ANY PUSHES TO GITHUB. -->
+
 To submit the assessment, you should do the following:
 
 - [ ] Create a pull request against the original repository.
@@ -88,12 +90,12 @@ The page should fit the following requirements:
 
 - When the user enters their review into the text input and presses the "Submit Review" button, they should see:
 
-  - [ ] The review, inside of an `li`, with the name of the movie in a `strong` element and the text of the review afterwards.
-  - [ ] The review text should be cleared from the text input.
+  - [x] The review, inside of an `li`, with the name of the movie in a `strong` element and the text of the review afterwards.
+  - [x] The review text should be cleared from the text input.
 
   ![Page after the review has been submitted.](./images/readme/submit-review.png)
 
-- [ ] If the user selects a different dropdown option after making the review, all of the reviews should stay where they are.
+- [x] If the user selects a different dropdown option after making the review, all of the reviews should stay where they are.
       ![Page after multiple reviews have been submitted.](./images/readme/multi-review.png)
 
 ### Commit history
