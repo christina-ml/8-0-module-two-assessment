@@ -1,4 +1,3 @@
-let mainSection = document.querySelector("#main-section");
 fetch("https://ghibliapi.herokuapp.com/films")
     .then((res)=> res.json())
     .then((data)=>{
