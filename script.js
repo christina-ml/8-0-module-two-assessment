@@ -47,23 +47,22 @@ fetch("https://ghibliapi.herokuapp.com/films")
 
         /* Find the input value of `review-field` */
         let reviewInput = document.querySelector("#review-field");
-        console.log(reviewInput.value);
 
         let submitButton = document.querySelector("#submit-button");
         submitButton.addEventListener("click", (event)=>{
-            event.preventDefault();
-            /* Console.log the 3 values we want. Use `.value` to have access to them */
-            // console.log(textInput.value, fontSelection.value, colorSelection.value);
-            
-            
+            event.preventDefault(); // stops page refresh
             /* Create a list item element to add to empty ul */
             let li = document.createElement("li");
             submitList.append(li);
 
-            /* Using `textContent` on the list item bc its informational */
-            li.textContent = `${reviewInput.value}`; // add text content
+            let strong = document.createElement("strong");
+            li.append(strong);
+            /* Get display-info h3 title */
+            let movieHeader = document.querySelector("#display-info h3")
+            /* Using `textContent` on the list item */
+            li.textContent = `${movieHeader.textContent}: ${reviewInput.value}`; // add text content
             // <li>
-            //     BlahBlahBlah
+            //     <strong>BlahBlahBlah:</strong> reviewInput
             // </li>
             /* Append it to our page */
             submitList.append(li);
