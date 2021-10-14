@@ -1,20 +1,51 @@
+body {
+    background-color: lavender;
+    font-family: monospace;
+}
+
+/* Header */
 #header {
     background-color: skyblue;
     height: 200px;
     width: 75vw;
     margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "logo header header"
+    "logo . .";
 }
 
 #header h1 {
-    float: right;
-    padding-right: 50px;
+    grid-area: header;
 }
 
 #ghibli-logo {
     height: 200px;
+    grid-area: logo;
 }
 
-body {
-    background-color: lavender;
-    font-family: monospace;
+/* Main Section */
+main {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+#movie-titles-selection {
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Review Form */
+#review-form {
+    margin-left: 65px;
+    margin-top: 60px;
+}
+
+#review-field {
+    width: 220px;
+}
+
+#submit-button {
+    width: 200px;
 }
