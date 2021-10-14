@@ -36,6 +36,11 @@ main {
     margin-bottom: 20px;
 }
 
+#display-info {
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
 /* Review Form */
 #review-form {
     margin-left: 65px;
