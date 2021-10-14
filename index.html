@@ -9,10 +9,37 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- header -->
     <header id="header">
         <img id="ghibli-logo" src="./images/ghibli-logo.png" alt="ghibli logo" />
         <h1>Ghibli Review App</h1>
     </header>
+    <!-- main section -->
+    <main>
+        <select id="movie-titles-selection">
+            <option value="default">--Please select a movie--</option>
+        </select>
+        
+        <!-- EMPTY - section -->
+        <section id="display-info"></section>
+
+        <!-- text input -->
+        <form id="review-form">
+            <label>Your Review</label>
+            <!-- single text input -->
+            <input 
+              id="review-field"
+              name="review-field"
+              type="text"
+              placeholder="type a review"
+            />
+          <!-- submit button -->
+          <input id="submit-button" type="submit" value="Submit Review"/>
+
+          <!-- EMPTY - ul -->
+          <ul></ul>
+
+    </main>
 
 </body>
 </html>
