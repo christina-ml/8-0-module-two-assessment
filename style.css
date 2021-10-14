@@ -1,3 +1,20 @@
+#header {
+    background-color: skyblue;
+    height: 200px;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+#header h1 {
+    float: right;
+    padding-right: 50px;
+}
+
+#ghibli-logo {
+    height: 200px;
+}
+
 body {
-    color: red;
+    background-color: lavender;
+    font-family: monospace;
 }
