@@ -22,14 +22,21 @@ fetch("https://ghibliapi.herokuapp.com/films")
         /* Select `display-info` section where movie title will go */
         let displayInfo = document.querySelector("#display-info");
 
+
         /* Event Listener on dropdown list */
         dropDownMovies.addEventListener("change", (e) => {
             for (let movie of movieData) {
+                /* Find `release-year` and `movie-description` */
+                let releaseYear = movie.release_date;
+                let movieDescription = movie.description;
+                // console.log(releaseYear); // works
+                // console.log(movieDescription); // works
+
                 if (dropDownMovies.value === movie.title) {
                     console.log(movie.title);
                     displayInfo.innerHTML = `<h3>${movie.title}</h3>
-                    <p id="release-year"></p>
-                    <p id="movie-description"></p>`;
+                    <p id="release-year">${movie.release_date}</p>
+                    <p id="movie-description">${movie.description}</p>`;
                 }
             }
         });
