@@ -2,55 +2,50 @@
     border: 1px solid black;
 } */
 
-body {
-    background-color: lavender;
-    font-family: monospace;
+body{
     display: grid;
-    grid-template-areas:
+    grid-template-areas: 
     "header header"
     "dropdown ."
     "displayInfo displayInfo"
     "review review";
     grid-gap: 10px;
+    background-color: lavender;
+    font-family: monospace;
     width: 75%;
     margin: 10px auto;
 }
 
-header {
+header{
     background-color: skyblue;
-    /* grid-template-columns: 1fr 1fr; */
-    display: grid;
     grid-area: header;
-    grid-template-areas: "image title";
 }
 
-header img {
+header img{
     width: 300px;
 }
 
-#dropdown {
+#dropdown{
     grid-area: dropdown;
     text-align: center;
 }
+#dropdown select{
+    width:200px;
+}
 
-#display-info {
+#display-info{
     grid-area: displayInfo;
     min-height: 50px;
 }
 
-#dropdown select {
-    width: 200px;
-}
-
-#review {
+#review{
     grid-area: review;
     text-align: center;
 }
-
-#review input[type=submit] {
-    width: 200px;
+#review input[type="submit"]{
+    width:200px;
 }
 
-#dropdown, #display-info, #review {
+#dropdown, #display-info, #review{
     padding: 10px;
 }
