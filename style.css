@@ -1,6 +1,6 @@
-body > * {
+/* body > * {
     border: 1px solid black;
-}
+} */
 
 body {
     background-color: lavender;
@@ -13,16 +13,19 @@ body {
     "review review";
     grid-gap: 10px;
     width: 75%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 header {
     background-color: skyblue;
+    /* grid-template-columns: 1fr 1fr; */
+    display: grid;
     grid-area: header;
+    grid-template-areas: "image title";
 }
 
 header img {
-    width: 375px;
+    width: 300px;
 }
 
 #dropdown {
@@ -32,10 +35,20 @@ header img {
 
 #display-info {
     grid-area: displayInfo;
+    min-height: 50px;
+}
+
+#dropdown select {
+    width: 200px;
 }
 
 #review {
     grid-area: review;
+    text-align: center;
+}
+
+#review input[type=submit] {
+    width: 200px;
 }
 
 #dropdown, #display-info, #review {
