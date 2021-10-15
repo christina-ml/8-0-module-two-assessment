@@ -21,9 +21,12 @@ fetch("https://ghibliapi.herokuapp.com/films")
         const description = document.createElement("p");
         section.append(title, year, description);
 
+        let selectedMovie;
+
         dropdown.addEventListener("change", (e)=>{
             for(let movie of movies){
                 if (e.target.value === movie.title) {
+                    selectedMovie = movie;
                     year.textContent = movie.release_date;
                     title.textContent = movie.title;
                     description.textContent = movie.description;
@@ -31,5 +34,6 @@ fetch("https://ghibliapi.herokuapp.com/films")
                 }
             }
         })
+        // STEP 4 --------- ADD FUNCTIONALITY TO FORM TO LEAVE MOVIE REVIEW --------- 
+        
     })
-// STEP 4 --------- ADD FUNCTIONALITY TO FORM TO LEAVE MOVIE REVIEW --------- 
