@@ -2,6 +2,17 @@ body > * {
     border: 1px solid black;
 }
 
+body {
+    display: grid;
+    background-color: lavender;
+    font-family: monospace;
+}
+
+header {
+    background-color: skyblue;
+    width: 75%;
+}
+
 header img {
     width: 375px;
 }
