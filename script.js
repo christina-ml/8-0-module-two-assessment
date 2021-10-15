@@ -14,7 +14,22 @@ fetch("https://ghibliapi.herokuapp.com/films")
             option.setAttribute("value", movie.title);
             dropdown.append(option);
         }
-    })
+        // STEP 3 ---------  DISPLAY SELECTED MOVIE'S DATA --------- 
+        const section = document.querySelector("#display-info");
+        const year = document.createElement("p");
+        const title = document.createElement("h3");
+        const description = document.createElement("p");
+        section.append(title, year, description);
 
-// STEP 3 ---------  DISPLAY SELECTED MOVIE'S DATA --------- 
+        dropdown.addEventListener("change", (e)=>{
+            for(let movie of movies){
+                if (e.target.value === movie.title) {
+                    year.textContent = movie.release_date;
+                    title.textContent = movie.title;
+                    description.textContent = movie.description;
+                    break;
+                }
+            }
+        })
+    })
 // STEP 4 --------- ADD FUNCTIONALITY TO FORM TO LEAVE MOVIE REVIEW --------- 
