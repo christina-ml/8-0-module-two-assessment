@@ -35,5 +35,15 @@ fetch("https://ghibliapi.herokuapp.com/films")
             }
         })
         // STEP 4 --------- ADD FUNCTIONALITY TO FORM TO LEAVE MOVIE REVIEW --------- 
-        
+        const form = document.querySelector('form');
+        const ul = document.querySelector('ul');
+
+        form.addEventListener("submit", (event)=>{
+            event.preventDefault();
+            let liReview = document.createElement("li");
+            let reviewContent = document.querySelector("#review-input");
+            liReview.innerHTML = `<b>${selectedMovie.title}:</b> ${reviewContent.value}`  // Sam used this: ${e.target.review-input.value}
+            ul.append(liReview);
+            reviewContent.value = "";
+        })
     })
