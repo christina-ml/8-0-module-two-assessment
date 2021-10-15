@@ -40,8 +40,9 @@ header img{
 
 #review{
     grid-area: review;
-    text-align: center;
+    margin: 0 auto;
 }
+
 #review input[type="submit"]{
     width:200px;
 }
