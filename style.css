@@ -3,16 +3,41 @@ body > * {
 }
 
 body {
-    display: grid;
     background-color: lavender;
     font-family: monospace;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "dropdown ."
+    "displayInfo displayInfo"
+    "review review";
+    grid-gap: 10px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 header {
     background-color: skyblue;
-    width: 75%;
+    grid-area: header;
 }
 
 header img {
     width: 375px;
+}
+
+#dropdown {
+    grid-area: dropdown;
+    text-align: center;
+}
+
+#display-info {
+    grid-area: displayInfo;
+}
+
+#review {
+    grid-area: review;
+}
+
+#dropdown, #display-info, #review {
+    padding: 10px;
 }
