@@ -1,0 +1,7 @@
+body > * {
+    border: 1px solid black;
+}
+
+header img {
+    width: 375px;
+}
